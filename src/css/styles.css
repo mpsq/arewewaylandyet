@@ -32,22 +32,22 @@ a {
   color: var(--palette-gray);
 }
 
+small {
+  font-size: 0.6rem;
+}
+
 .wayland {
   text-decoration: none;
   color: var(--palette-gray);
 }
 
 .wayland:hover {
-  color: var(--palette-black);
+  color: var(--palette-white);
 }
 
 .accent--wayland {
   padding: 0 8px;
   background: var(--palette-wayland);
-}
-
-.accent--wayland:hover {
-  color: var(--palette-white);
 }
 
 .accent--nvidia {
@@ -129,6 +129,10 @@ a {
   line-height: 1.5;
   border-top: 1px solid var(--palette-black);
   font-size: 0.9rem;
+}
+
+.notes__date {
+  color: var(--palette-gray);
 }
 
 @media (max-width: 812px) {
