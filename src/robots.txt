@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /sitemap.xml
+Sitemap: https://arewewaylandyet.com/sitemap.xml
+Host: https://arewewaylandyet.com
