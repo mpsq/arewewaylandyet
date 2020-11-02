@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Are we Wayland yet?</title>
-    <meta name="description" content="Are we Wayland yet? Yes, and it works like a charm." />
+    <meta name="description" content="Mostly..." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css?v=1.0" />
     <link rel="stylesheet" href="css/styles.css?v=1.0" />
@@ -12,79 +12,80 @@
   <body>
     <h1>
       Are we
-      <a class="makeitwaylandcolored wayland" href="https://wayland.freedesktop.org/">Wayland</a>
+      <a class="accent--wayland wayland" href="https://wayland.freedesktop.org/">Wayland</a>
       yet?
     </h1>
-    <h2>Yes.</h2>
-    <p class="yay">And it works like a charm.</p>
-    <section class="whatabout">
-      <p class="whatabout__title">Wait a second, where is my...</p>
-      <ul class="things">
-        <li>
+
+    <h2>Mostly...</h2>
+
+    <section class="section">
+      <p class="section__title">OK, but where is my:</p>
+      <ul class="section__list">
+        <li class="list__item--ok">
           Application launcher:
           <a href="https://github.com/Cloudef/bemenu">bemenu</a>,
           <a href="https://sr.ht/~leon_plickat/LavaLauncher/">LavaLauncher</a>,
           <a href="https://hg.sr.ht/~scoopta/wofi">wofi</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Clipboard manager:
           <a href="https://github.com/yory8/clipman">clipman</a>,
           <a href="https://github.com/bugaevc/wl-clipboard">wl-clipboard</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Color picker:
           <a href="https://github.com/nwg-piotr/azote">Azote</a>,
           <a href="https://unix.stackexchange.com/a/523805">grim</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Compiz support:
           <a href="https://github.com/WayfireWM/wayfire">Wayfire</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Desktop environment:
           <a href="https://www.gnome.org/">GNOME</a>,
           <a href="https://kde.org/">KDE</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Document viewer:
           <a href="https://git.pwmt.org/pwmt/zathura">Zathura</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Gamma & day/night adjustment tool:
           <a href="https://gitlab.com/chinstrap/gammastep">gammastep</a>,
           <a href="https://sr.ht/~kennylevinsen/wlsunset/">wlsunset</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Image viewer:
           <a href="https://github.com/eXeC64/imv">imv</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Notification daemon:
           <a href="https://github.com/emersion/mako">mako</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Output/display configuration tool:
           <a href="https://github.com/emersion/kanshi">kanshi</a>,
           <a href="https://github.com/cyclopsian/wdisplays">wdisplays</a>,
           <a href="https://github.com/emersion/wlr-randr">wlr-randr</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Screenshot / screen capture & share tool:
           <a href="https://github.com/emersion/grim">grim</a>/<a href="https://github.com/emersion/slurp">slurp</a>,
           <a href="https://github.com/obsproject/obs-studio">OBS</a>,
           <a href="https://github.com/jtheoof/swappy">swappy</a>,
           <a href="https://github.com/any1/wayvnc">wayvnc</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Status bar:
           <a href="https://github.com/Alexays/Waybar">Waybar</a>,
           <a href="https://gitlab.com/dnkl/yambar">yambar</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           System monitoring widget:
           <a href="https://sr.ht/~kennylevinsen/wldash/">wldash</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Terminal:
           <a href="https://github.com/alacritty/alacritty">Alacritty</a>,
           <a href="https://help.gnome.org/users/gnome-terminal/stable/">gnome-terminal</a>,
@@ -92,28 +93,28 @@
           <a href="https://launchpad.net/sakura">Sakura</a>,
           <a href="https://github.com/thestinger/termite">Termite</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Tiling window manager:
           <a href="https://github.com/djpohly/dwl">dwl</a>,
           <a href="https://github.com/ifreund/river">River</a>,
           <a href="https://github.com/swaywm/sway">Sway</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           User input simulating tool:
           <a href="https://github.com/ReimuNotMoe/ydotool">ydotool</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Video player:
           <a href="https://github.com/mpv-player/mpv">mpv</a>,
           <a href="https://www.videolan.org/vlc/index.en-GB.html">vlc</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Wallpaper manager:
           <a href="https://github.com/nwg-piotr/azote">Azote</a>,
           <a href="https://github.com/swaywm/swaybg">swaybg</a>,
           <a href="https://github.com/xyproto/wallutils">Wallutils</a>
         </li>
-        <li>
+        <li class="list__item--ok">
           Web browser:
           <a href="https://www.chromium.org/">Chromium</a>
           (Wayland native <a href="https://www.phoronix.com/scan.php?page=news_item&px=Wayland-Chromium-2020">soon</a>),
@@ -122,10 +123,33 @@
         </li>
       </ul>
     </section>
+
+    <section class="section">
+      <p class="section__title">
+        That's great, but you did not mention <span class="accent--nvidia">nvidia</span>...
+      </p>
+      <ul class="section__list">
+        <li class="list__item--kinda">
+          With limitations/caveats it runs,
+          on <a href="https://wiki.gnome.org/Initiatives/Wayland/NVIDIA">GNOME</a>
+        </li>
+        <li class="list__item--kinda">
+          With "showstoppers" it runs,
+          on <a href="https://community.kde.org/Plasma/Wayland_Showstoppers">KDE</a>
+        </li>
+        <li class="list__item--ko">
+          For all others scenarios, it does <b>NOT</b> work 😔
+        </li>
+      </ul>
+    </section>
+
     <footer class="notes">
       Powered simply by plain HTML/CSS ❤️
       <br />
-      This list is by no means exhaustive. If you think something is missing, please create a PR / issue on the <a href="https://github.com/mpsq/arewewaylandyet">repository</a>.
+      This list is by no means exhaustive.
+      If you think something is missing, please create a PR / issue on the <a href="https://github.com/mpsq/arewewaylandyet">repository</a>.
+      <br />
+      Last updated: 2 November 2020
     </footer>
   </body>
 </html>
