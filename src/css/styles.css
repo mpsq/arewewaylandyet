@@ -1,15 +1,22 @@
-html {
+:root {
   --palette-black: #222222;
   --palette-gray: #666666;
+  --palette-light-gray: #666666;
   --palette-green: #4caf50;
   --palette-nvidia: #76b900; /* official color */
   --palette-red: #f44336;
   --palette-wayland: #ffbc00; /* official color */
   --palette-white: #fafafa;
+}
 
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
+[data-theme="dark"] {
+  --palette-black: #fafafa;
+  --palette-white: #222222;
+  --palette-gray: #aaaaaa;
+  --palette-light-gray: #efefef;
+}
+
+html {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -36,9 +43,47 @@ small {
   font-size: 0.6rem;
 }
 
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.btn {
+  padding: 0.25rem 0.5rem;
+  color: var(--palette-black);
+  border: 2px solid transparent;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: var(--palette-white);
+  background: var(--palette-black);
+}
+
+.btn:focus {
+  outline: 2px dotted var(--palette-black);
+}
+
+.btn:active {
+  border-color: var(--palette-wayland);
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn--dark-mode {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 .wayland {
   text-decoration: none;
-  color: var(--palette-gray);
+  color: var(--palette-light-gray);
 }
 
 .wayland:hover {
@@ -71,10 +116,6 @@ small {
   font-size: 1.1rem;
   text-align: left;
   list-style-type: none;
-}
-
-:root {
-  --width: 12px;
 }
 
 .list__item--kinda,
