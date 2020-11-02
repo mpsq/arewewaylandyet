@@ -18,5 +18,5 @@ git clone git@github.com:mpsq/arewewaylandyet.git
 cd arewewaylandyet/src
 # run any web server, I use python for that:
 python -m http.server
-# the website is not accessible at http://localhost:8000
+# the website is now accessible at http://localhost:8000
 ```
