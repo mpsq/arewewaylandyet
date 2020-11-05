@@ -1,6 +1,6 @@
 baseURL = "https://arewewaylandyet.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Are we Wayland yet?"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
