@@ -1,0 +1,14 @@
+baseURL = "https://arewewaylandyet.com/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+enableRobotsTXT = true
+
+assetDir = "src"
+
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5

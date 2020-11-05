@@ -13,10 +13,23 @@ interesting comments and valuable links, it is worth
 
 # How to build
 
-```bash
+## Prerequisites
+
+- [Hugo](https://github.com/gohugoio/hugo) 0.77+
+
+## Steps
+
+1.
+
+```shell
 git clone git@github.com:mpsq/arewewaylandyet.git
-cd arewewaylandyet/src
-# run any web server, I use python for that:
-python -m http.server
-# the website is now accessible at http://localhost:8000
+cd arewewaylandyet
 ```
+
+2.
+
+```shell
+hugo server -D
+```
+
+3. The development server should be accessible at http://localhost:1313.
