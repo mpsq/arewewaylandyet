@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="Mostly...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+
+  <base href="{{ .Site.BaseURL }}">
+  <title> {{ .Title }} </title>
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ $normalize := resources.Get "css/normalize.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $normalize.RelPermalink }}" integrity="{{ $normalize.Data.Integrity }}">
+
+  {{ $main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+
+  {{ $themePreload := resources.Get "js/theme-preload.js" | js.Build | resources.Minify | resources.Fingerprint "sha512" }}
+  <script type="text/javascript" src="{{ $themePreload.RelPermalink }}" integrity="{{ $themePreload.Data.Integrity }}"></script>
+
+  {{ $themeSwitcher := resources.Get "js/theme-switcher.js" | js.Build | resources.Minify | resources.Fingerprint "sha512" }}
+  <script async type="text/javascript" src="{{ $themeSwitcher.RelPermalink }}" integrity="{{ $themeSwitcher.Data.Integrity }}"></script>
+</head>

@@ -1,0 +1,37 @@
+/
+  Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self' https://fonts.gstatic.com data:; manifest-src 'self'; prefetch-src 'self'; media-src data:; worker-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri https://arewewaylandyet.report-uri.com/r/d/csp/enforce; report-to rui;
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Strict-Transport-Security: max-age=15768000
+  Cache-Control: public, max-age=60
+
+/*
+  Content-Security-Policy: default-src 'none'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self' https://fonts.gstatic.com data:; manifest-src 'self'; prefetch-src 'self'; media-src data:; worker-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri https://arewewaylandyet.report-uri.com/r/d/csp/enforce; report-to rui;
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=()
+  Strict-Transport-Security: max-age=15768000
+  Cache-Control: public, max-age=60
+
+/*.html
+  NEL: {"report_to":"report-uri","max_age":31536000,"include_subdomains":false}
+
+/*.*.js
+  Cache-Control: public, max-age=31536000
+
+/*.*.txt
+  Cache-Control: public, max-age=31536000
+
+/*.*.css
+  Cache-Control: public, max-age=31536000
+
+/img/*
+  Cache-Control: public, max-age=172800
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=172800
