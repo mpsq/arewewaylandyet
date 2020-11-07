@@ -15,21 +15,28 @@ interesting comments and valuable links, it is worth
 
 ## Prerequisites
 
-- [Hugo](https://github.com/gohugoio/hugo) 0.77+
+- [Hugo](https://github.com/gohugoio/hugo) 0.78+
+- [NodeJS](https://nodejs.org) 12 with `npm` or `yarn`
 
 ## Steps
 
-1.
+1. Get the code
 
-```shell
+```bash
 git clone git@github.com:mpsq/arewewaylandyet.git
 cd arewewaylandyet
 ```
 
-2.
+2. Install dependencies
 
-```shell
+```bash
+npm install # yarn will work too
+```
+
+3. Run the development server
+
+```bash
 hugo server -D
 ```
 
-3. The development server should be accessible at http://localhost:1313.
+The server should be accessible at http://localhost:1313.

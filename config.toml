@@ -12,3 +12,6 @@ assetDir = "src"
   changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[build]
+  noJSConfigInAssets = true

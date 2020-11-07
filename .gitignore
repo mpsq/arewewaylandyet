@@ -1,3 +1,4 @@
-/resources
-/public
+node_modules
 /.log
+/public
+/resources

@@ -1,0 +1,17 @@
+name: Hugo CI
+
+on: [push]
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+
+    - name: Test build
+      run: hugo

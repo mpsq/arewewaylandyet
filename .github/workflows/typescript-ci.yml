@@ -1,0 +1,29 @@
+name: TypeScript CI
+
+on: [push]
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Linting
+      run: npm run ci:lint
+      env:
+        CI: true
+
+    - name: Type checking
+      run: npm run ci:type-check
+      env:
+        CI: true
