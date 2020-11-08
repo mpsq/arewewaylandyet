@@ -1,14 +1,9 @@
 {{ define "main" }}
 <main aria-role="main">
-  <h1>
-    Are we
-    <a class="accent--wayland wayland" href="https://wayland.freedesktop.org/"
-      >Wayland</a
-    >
-    yet?
-  </h1>
 
-  <h2>Mostly...</h2>
+	{{ partial "title" . }}
+
+  <h2 class="title--answer">Mostly...</h2>
 
   <section class="section">
     <p class="section__title">OK, but where is my:</p>
