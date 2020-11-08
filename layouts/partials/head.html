@@ -15,17 +15,20 @@
   <title> {{ .Title }} </title>
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{ $normalize := resources.Get "css/normalize.css" | resources.Minify | resources.Fingerprint "sha512" }}
-  <link rel="stylesheet" href="{{ $normalize.RelPermalink }}" integrity="{{ $normalize.Data.Integrity }}">
+  {{ $normalizeStyles := resources.Get "css/normalize.css" }}
+  {{ $mainStyles := resources.Get "css/main.css" }}
+  {{ $themePreload := resources.Get "scripts/theme-preload.ts" | js.Build }}
+  {{ $themeSwitcher := resources.Get "scripts/theme-switcher.ts" | js.Build }}
 
-  {{ $main := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint "sha512" }}
-  <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+  {{ if eq (getenv "HUGO_ENV") "production" }}
+    {{ $normalizeStyles = $normalizeStyles | resources.Minify | resources.Fingerprint "sha512" }}
+    {{ $mainStyles = $mainStyles | resources.Minify | resources.Fingerprint "sha512" }}
+    {{ $themePreload = $themePreload | resources.Minify | resources.Fingerprint "sha512" }}
+    {{ $themeSwitcher = $themeSwitcher | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ end }}
 
-  {{ $esbuildOpts := dict "tsconfig" "../tsconfig.json" "loader" "ts" }}
-
-  {{ $themePreload := resources.Get "scripts/theme-preload.ts" | js.Build $esbuildOpts | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $normalizeStyles.RelPermalink }}" integrity="{{ $normalizeStyles.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $mainStyles.RelPermalink }}" integrity="{{ $mainStyles.Data.Integrity }}">
   <script type="text/javascript" src="{{ $themePreload.RelPermalink }}" integrity="{{ $themePreload.Data.Integrity }}"></script>
-
-  {{ $themeSwitcher := resources.Get "scripts/theme-switcher.ts" | js.Build $esbuildOpts | resources.Minify | resources.Fingerprint "sha512" }}
   <script async type="text/javascript" src="{{ $themeSwitcher.RelPermalink }}" integrity="{{ $themeSwitcher.Data.Integrity }}"></script>
 </head>
